@@ -163,3 +163,75 @@ main {
 .preorder-btn:hover {
   background-color: #555; /* Dark gray hover */
 }
+
+/* Component Blocks */
+.components {
+  padding: 50px 0;
+  background-color: #fff; /* White background */
+}
+
+.component-block {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 50px;
+}
+
+/* Component Text */
+.component-text {
+  flex: 1;
+  padding: 20px;
+  text-align: center;
+}
+
+.component-text h2 {
+  font-size: 24px;
+  color: #333; /* Dark gray text */
+  margin-bottom: 20px;
+}
+
+.component-text p {
+  font-size: 18px;
+  color: #555; /* Medium gray text */
+}
+
+/* Component Image */
+.component-image {
+  flex: 1;
+  overflow: hidden;
+}
+
+.component-image img {
+  width: 100%;
+  height: auto;
+  display: block;
+  transition: transform 0.3s ease-in-out;
+}
+
+/* Component Image - Align Right for Odd Blocks */
+.component-block:nth-child(odd) .component-image {
+  text-align: right;
+}
+
+/* Component Image - Align Left for Even Blocks */
+.component-block:nth-child(even) .component-image {
+  text-align: left;
+}
+
+/* Component Image - Image Styles */
+.component-image img {
+  max-width: 100%;
+  height: auto;
+}
+
+/* Component Text - Arrow */
+.component-text::after {
+  content: "";
+  border: solid black;
+  border-width: 0 3px 3px 0;
+  display: inline-block;
+  padding: 3px;
+  transform: rotate(-45deg);
+  -webkit-transform: rotate(-45deg);
+  margin-left: 10px;
+}
